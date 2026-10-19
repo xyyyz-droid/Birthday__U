@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Favorite Boy ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+
+  <!-- AMPLOP PEMBUKA -->
+  <section id="introScreen" class="intro-screen">
+    <div class="intro-stars">✦ · ✧ · ✦</div>
+
+    <p class="intro-label">A LITTLE SOMETHING FOR YOU</p>
+    <h1 class="intro-title">Hey, <span id="introName">my love</span>.</h1>
+    <p class="intro-subtitle">
+      Someone made something special just for you.
+    </p>
+
+    <button id="envelopeBtn" class="envelope-button" type="button">
+      <span class="envelope-glow"></span>
+      <span class="letter-paper">
+        <span>FOR YOU</span>
+        <span class="paper-heart">♡</span>
+      </span>
+      <span class="envelope-back"></span>
+      <span class="envelope-front"></span>
+      <span class="envelope-flap"></span>
+      <span class="envelope-seal">♡</span>
+    </button>
+
+    <!-- CINEMATIC LETTER REVEAL -->
+<div id="letterReveal" class="letter-reveal">
+  <div class="reveal-glow"></div>
+
+  <div class="reveal-petals">
+    <span>🌸</span>
+    <span>♡</span>
+    <span>🌸</span>
+    <span>♡</span>
+    <span>🌷</span>
+    <span>♡</span>
+  </div>
+
+  <div class="reveal-letter">
+    <div class="reveal-letter-inner">
+      <span class="reveal-small">A LITTLE MESSAGE FOR YOU</span>
+
+      <div class="reveal-heart">♡</div>
+
+      <p class="reveal-message">
+        To the one who makes<br>
+        my world a little brighter.
+      </p>
+
+      <div class="reveal-line"></div>
+
+      <span class="reveal-signature">
+        with all my love, ♡
+      </span>
+    </div>
+  </div>
+</div>
+
+    <p id="envelopeHint" class="envelope-hint">
+      TAP THE ENVELOPE TO OPEN ♡
+    </p>
+
+    <p class="intro-love-message" id="introLoveMessage">
+  You are my favorite kind of forever. ♡
+</p>
+
+    <button id="skipIntro" class="skip-button" type="button">
+      or skip intro →
+    </button>
+  </section>
+
+  <!-- LATAR BELAKANG BINTANG -->
+  <div id="universe"></div>
+  <div class="vignette"></div>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <a class="brand" href="#top">for you <span>♡</span></a>
+    <button id="musicBtn" class="music-btn" type="button">
+      ♫ <span>Play music</span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <main id="mainContent">
+    <section id="top" class="hero">
+
+      <div class="eyebrow">
+        <span></span>
+        A LITTLE WORLD MADE FOR YOU
+        <span></span>
+      </div>
+
+      <p class="intro">To the boy who has my heart,</p>
+
+      <h1>Happy Birthday<span class="dot">.</span></h1>
+
+      <p class="name-line">
+        my favorite person, <span id="boyName">my love</span> ♡
+      </p>
+
+      <p class="description">
+       Jika aku bisa memberikan satu hal untukmu di dunia ini, 
+       hal itu adalah kemampuan untuk melihat dirimu sendiri melalui mataku. 
+       Mungkin dengan begitu, kamu akan tahu betapa istimewanya dirimu bagiku.
+      </p>
+
+
+      <!-- COUNTDOWN -->
+      <div class="countdown-card">
+        <p class="eyebrow">COUNTING DOWN TO YOUR SPECIAL DAY</p>
+
+        <div class="countdown">
+          <div>
+            <strong id="days">00</strong>
+            <span>DAYS</span>
+          </div>
+          <div>
+            <strong id="hours">00</strong>
+            <span>HOURS</span>
+          </div>
+          <div>
+            <strong id="minutes">00</strong>
+            <span>MINUTES</span>
+          </div>
+          <div>
+            <strong id="seconds">00</strong>
+            <span>SECONDS</span>
+          </div>
+        </div>
+
+        <p id="countdownMessage" class="countdown-message">
+          Every second brings us closer to your day ♡
+        </p>
+      </div>
+
+      <!-- KUE 3D -->
+      <div class="scene-wrap">
+        <div class="scene-label">
+          ✦ YOUR LITTLE BIRTHDAY UNIVERSE ✦
+        </div>
+
+        <div id="cakeScene">
+          <div class="scene-fallback">
+            Kue 3D sedang dimuat...
+          </div>
+        </div>
+
+        <div class="scene-controls">
+        SERET UNTUK MEMUTAR · MAKE A WISH
+        </div>
+      </div>
+
+      <button class="primary-btn" id="wishBtn" type="button">
+        <span>Buat Permohonan</span>
+        <span>↗</span>
+      </button>
+
+      <p class="scroll-note">
+        THERE'S SOMETHING ELSE FOR YOU ↓
+      </p>
+    </section>
+
+    <!-- FOTO KENANGAN -->
+    <section class="memories section">
+      <p class="eyebrow">CHAPTERS OF US</p>
+
+      <h2>Momen-momen kecil,<br><i>Perasaan yang besar.</i></h2>
+
+      <p class="section-desc">
+       Jika aku bisa mengabadikan satu momen selamanya,
+        momen itu adalah momen bersamamu.
+      </p>
+
+      <div class="gallery">
+        <article class="photo-card">
+          <img src="images/foto1.jpeg" alt="Kenangan pertama">
+          <p>the little things ♡</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto2.jpeg" alt="Kenangan bahagia">
+          <p>my safe place.</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="images/foto3.jpeg" alt="Kenangan kita">
+          <p>you &amp; me, always.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SURAT CINTA -->
+    <section class="letter-section section">
+      <div class="letter-orb">♡</div>
+
+      <p class="eyebrow">SOMETHING FROM MY HEART</p>
+      <h2>Satu hal terakhir...</h2>
+
+      <p class="section-desc">
+        Ada kata-kata yang kuharap kau bawa bersamamu,
+        bahkan di hari-hari yang berat.
+      </p>
+
+      <button class="primary-btn" id="letterBtn" type="button">
+       Buka suratmu <span>♡</span>
+      </button>
+    </section>
+
+    <footer>
+      <p>Di semesta mana pun, aku akan tetap memilihmu.</p>
+      <span>Dibuat dengan penuh kasih, khusus untukmu · ♡</span>
+    </footer>
+  </main>
+
+  <!-- POPUP MAKE A WISH -->
+  <div class="overlay" id="wishOverlay">
+    <div class="popup">
+      <button class="close-btn" data-close="wishOverlay" type="button">×</button>
+
+      <p class="eyebrow">THE UNIVERSE IS LISTENING</p>
+      <div class="big-heart">✦</div>
+
+      <h2>Jadikan tahun ini tahun yang indah.</h2>
+
+      <p>
+        Pejamkan matamu sejenak. 
+        Pikirkan sesuatu yang sungguh diinginkan oleh hatimu. 
+        Kamu layak mendapatkan hal-hal yang baik, sayangku.
+      </p>
+
+      <button class="primary-btn" id="blowBtn" type="button">
+        Buka Kartu Ucapan ✨
+      </button>
+    </div>
+  </div>
+
+  <!-- POPUP SURAT -->
+  <div class="overlay" id="letterOverlay">
+    <div class="popup letter-popup">
+      <button class="close-btn" data-close="letterOverlay" type="button">×</button>
+
+      <p class="eyebrow">SEPUCUK SURAT KHUSUS UNTUKMU</p>
+
+      <h2>Dear <span id="letterName">my love</span>,</h2>
+
+      <p id="loveLetter">Happy birthday, my favorite boy. ♡
+
+        Semoga tahun ini memberimu lebih banyak alasan untuk tersenyum, lebih banyak keberanian untuk mengejar impianmu,
+        serta lebih banyak momen yang mengingatkanmu betapa indahnya hidup ini.
+
+        Mungkin aku tidak bisa melenyapkan setiap masalah, tetapi aku berharap bisa menjadi sosok tempatmu pulang.
+        Seseorang yang merayakan keberhasilanmu, mendengarkanmu di hari-hari yang sulit, dan akan terus memilihmu dalam situasi apa pun.
+
+        Terima kasih telah menjadi dirimu sendiri. Bagiku, kamu jauh lebih berarti daripada yang bisa aku ungkapkan dengan kata-kata.
+
+        Selamat ulang tahun, sayang. Mari ciptakan lebih banyak kenangan bersama. ♡</p>
+
+      <p class="signature">Selalu milikmu, ♡</p>
+    </div>
+  </div>
+
+  <!-- FILE MUSIK -->
+  <audio id="bgMusic" src="birthday.mp3" loop preload="none"></audio>
+
+  
+<!-- ===== MIDNIGHT LOVE: ENHANCEMENT ===== -->
+<section id="ml-experience">
+  <div class="ml-heading">
+    <span class="ml-eyebrow">SEBUAH SEMESTA KECIL UNTUKMU</span>
+    <h2>Duniaku, <span>Cintaku.</span></h2>
+    <p>Di antara miliaran bintang, aku tetap memilih kamu.</p>
+  </div>
+
+  <!-- Area galaksi dan objek 3D -->
+  <div id="ml-universe">
+    <canvas id="ml-scene" aria-label="Animasi galaksi, hati, dan kue ulang tahun"></canvas>
+
+    <div class="ml-scene-label">
+      <span class="ml-live-dot"></span>
+     DIBUAT DENGAN PENUH KASIH, KHUSUS UNTUKMU
+    </div>
+
+    <div class="ml-scene-bottom">
+      <span>✦ KAMU ADALAH SEMESTA FAVORITKU ✦</span>
+      <small>Gerakkan mouse untuk menjelajahi galaksi</small>
+    </div>
+  </div>
+
+  <!-- Teks romantis yang diketik otomatis -->
+  <div class="ml-message-card">
+    <span class="ml-eyebrow">PESAN DARI HATIKU</span>
+    <p id="ml-typed-text" aria-live="polite"></p>
+    <span class="ml-cursor">|</span>
+  </div>
+
+  <!-- Visualizer musik -->
+  <div class="ml-music-card">
+    <div class="ml-music-info">
+      <div class="ml-music-icon">♫</div>
+      <div>
+        <strong>Semesta Kecil Kita</strong>
+        <p>Setiap lagu cinta mengingatkanku padamu.</p>
+      </div>
+    </div>
+
+    <div id="ml-visualizer" aria-label="Visualizer musik">
+      <!-- Batang visualizer dibuat otomatis oleh JavaScript -->
+    </div>
+
+    <small id="ml-audio-status">Putar musik website untuk memulai visualizer</small>
+  </div>
+
+  <!-- Tombol kejutan ulang tahun -->
+  <div class="ml-surprise-card">
+    <div class="ml-cake-emoji">🎂</div>
+    <span class="ml-eyebrow">MOMEN ISTIMEWA KAMU</span>
+    <h3>Make a Wish, Birthday Boy!</h3>
+    <p>Tutup mata sebentar, buat permohonan, lalu tiup lilinnya. 🤍</p>
+    <button type="button" id="ml-blow-btn">
+      ✨ Tiup Lilin & Buka Kejutan
+    </button>
+    <p id="ml-surprise-result" aria-live="polite"></p>
+  </div>
+
+  <p class="ml-footer">Di suatu tempat di alam semesta ini, selalu saja kamu. ♡</p>
+</section>
+
+<!-- Hujan surat cinta -->
+<div id="ml-letter-layer" aria-label="Surat-surat cinta"></div>
+
+<!-- Popup surat -->
+<div id="ml-letter-modal" class="ml-modal" aria-hidden="true">
+  <div class="ml-modal-card" role="dialog" aria-modal="true" aria-labelledby="ml-letter-title">
+    <button type="button" id="ml-close-letter" class="ml-close" aria-label="Tutup surat">×</button>
+    <span class="ml-eyebrow">DISEGEL DENGAN CINTA</span>
+    <h3 id="ml-letter-title">Sebuah surat kecil untukmu 💌</h3>
+    <p id="ml-letter-content"></p>
+    <span class="ml-letter-signature">forever yours, ♡</span>
+  </div>
+</div>
+<!-- ===== END MIDNIGHT LOVE ===== -->
+
+
+</body>
+</html>
